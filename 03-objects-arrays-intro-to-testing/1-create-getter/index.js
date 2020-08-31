@@ -7,6 +7,6 @@ export function createGetter(path) {
   let propsArr = path.split('.')
   return (obj) =>
     Object.keys(obj).length
-      ? propsArr.reduce((acc, cur) => acc && acc[cur], obj)
+      ? propsArr.reduce((acc, cur) => acc[cur], obj)
       : undefined
 }
